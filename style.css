@@ -48,6 +48,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
@@ -127,26 +128,6 @@ nav ul li a:hover {
 }
 
 
-/* ==================== GitHub Button ==================== */
-
-.github-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #24292e;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.github-btn:hover {
-    background-color: #000000;
-    transform: translateY(-2px);
-}
-
-
 /* ==================== Sections ==================== */
 
 section {
@@ -218,6 +199,26 @@ section h2 {
 }
 
 
+/* ==================== GitHub Button ==================== */
+
+.github-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #24292e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.github-btn:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+
 /* ==================== Achievements ==================== */
 
 #achievements {
@@ -240,12 +241,41 @@ section h2 {
     background-color: white;
 }
 
+#contact p {
+    margin: 10px 0;
+}
+
+
+/* Contact Button */
+
+.contact-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background-color: #00a8c6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #00869d;
+    transform: translateY(-2px);
+}
+
+
+/* Contact Links */
+
 #contact a {
     color: #00a8c6;
     text-decoration: none;
+    font-weight: 600;
 }
 
 #contact a:hover {
+    color: #00869d;
     text-decoration: underline;
 }
 
@@ -292,10 +322,10 @@ footer {
     }
 
     .btn,
-    .resume-btn {
+    .resume-btn,
+    .contact-btn {
         display: block;
         width: fit-content;
         margin: 10px auto;
     }
-
 }
