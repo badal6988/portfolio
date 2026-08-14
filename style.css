@@ -1,165 +1,196 @@
-/* ==================== General ==================== */
+/* ==================== Global Styles ==================== */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: #222;
+    background: #f8f9fa;
 }
-
 
 /* ==================== Navigation ==================== */
 
 header {
-    background-color: #222;
-    padding: 15px 50px;
+    background: #111;
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav h2 {
-    color: white;
+    font-size: 28px;
+    color: #007bff;
 }
 
 nav ul {
-    display: flex;
     list-style: none;
+
+    display: flex;
     gap: 25px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 16px;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00bcd4;
+    color: #007bff;
 }
 
-
-/* ==================== Home / Hero ==================== */
+/* ==================== Hero Section ==================== */
 
 .hero {
     min-height: 90vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #eaf7fa;
+    padding: 60px 10%;
+    background: #ffffff;
 }
 
-.hero h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
+.hero-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
 }
 
-.hero h1 span {
-    color: #00a8c6;
+.hero-text {
+    max-width: 650px;
 }
 
-.hero h2 {
-    font-size: 25px;
+.hero-text h1 {
+    font-size: 50px;
     margin-bottom: 15px;
 }
 
-.hero p {
-    max-width: 600px;
-    margin: 0 auto 25px;
+.hero-text h1 span {
+    color: #007bff;
 }
 
-
-/* ==================== Projects Button ==================== */
-
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #00a8c6;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    margin: 5px;
-    transition: 0.3s;
+.hero-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #444;
 }
 
-.btn:hover {
-    background-color: #00869d;
-    transform: translateY(-2px);
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #555;
 }
 
+/* ==================== Profile Image ==================== */
 
-/* ==================== Resume Button ==================== */
+.profile-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #007bff;
+    flex-shrink: 0;
+}
 
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* ==================== Buttons ==================== */
+
+.btn,
 .resume-btn {
     display: inline-block;
-    padding: 12px 25px;
-    background-color: #000;
-    color: #fff;
+    padding: 12px 22px;
+    margin-right: 10px;
+    margin-top: 10px;
+
     text-decoration: none;
     border-radius: 6px;
-    font-weight: 600;
-    margin: 5px;
+
+    font-weight: bold;
     transition: 0.3s;
 }
 
-.resume-btn:hover {
-    background-color: #333;
-    transform: translateY(-2px);
+.btn {
+    background: #007bff;
+    color: white;
 }
 
+.resume-btn {
+    background: #222;
+    color: white;
+}
 
-/* ==================== Sections ==================== */
+.btn:hover,
+.resume-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* ==================== General Sections ==================== */
 
 section {
-    padding: 70px 10%;
-    text-align: center;
+    padding: 80px 10%;
 }
 
 section h2 {
+    text-align: center;
     font-size: 32px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
+    color: #111;
 }
 
-
-/* ==================== About ==================== */
+/* ==================== About Section ==================== */
 
 #about {
-    background-color: white;
+    background: #f1f3f5;
 }
 
 #about p {
-    max-width: 800px;
+    max-width: 850px;
     margin: auto;
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
 }
 
-
-/* ==================== Skills ==================== */
+/* ==================== Skills Section ==================== */
 
 #skills {
-    background-color: #f5f5f5;
+    background: #ffffff;
 }
 
 .skills-container {
+    max-width: 900px;
+    margin: auto;
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -167,136 +198,180 @@ section h2 {
 }
 
 .skill {
-    background-color: white;
-    padding: 12px 25px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    font-weight: 600;
+    background: #111;
+    color: white;
+
+    padding: 12px 22px;
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
+.skill:hover {
+    background: #007bff;
+    transform: translateY(-3px);
+}
 
-/* ==================== Projects ==================== */
+/* ==================== Projects Section ==================== */
 
 #projects {
-    background-color: white;
+    background: #f1f3f5;
 }
 
 .projects-container {
+    max-width: 900px;
+    margin: auto;
+
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .project-card {
-    max-width: 600px;
-    padding: 25px;
-    background-color: #f5f5f5;
+    background: white;
+
+    width: 100%;
+    max-width: 700px;
+
+    padding: 30px;
+
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 .project-card h3 {
+    color: #007bff;
     margin-bottom: 15px;
+    font-size: 23px;
 }
 
+.project-card p {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
 
 /* ==================== GitHub Button ==================== */
 
 .github-btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #24292e;
+
+    margin-top: 10px;
+    padding: 11px 20px;
+
+    background: #111;
     color: white;
+
     text-decoration: none;
+
     border-radius: 6px;
+
     font-weight: bold;
+
     transition: 0.3s;
 }
 
 .github-btn:hover {
-    background-color: #000000;
-    transform: translateY(-2px);
+    background: #007bff;
+    transform: translateY(-3px);
 }
 
-
-/* ==================== Achievements ==================== */
+/* ==================== Achievements Section ==================== */
 
 #achievements {
-    background-color: #f5f5f5;
+    background: #ffffff;
 }
 
 .achievement {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto 20px;
+
+    padding: 25px;
+
+    background: #f1f3f5;
+
+    border-left: 5px solid #007bff;
+
+    border-radius: 6px;
 }
 
+.achievement h3 {
+    margin-bottom: 8px;
+    color: #111;
+}
 
-/* ==================== Contact ==================== */
+.achievement p {
+    color: #555;
+}
+
+/* ==================== Contact Section ==================== */
 
 #contact {
-    background-color: white;
+    text-align: center;
+    background: #f1f3f5;
 }
 
 #contact p {
-    margin: 10px 0;
+    margin-bottom: 25px;
+    color: #555;
 }
 
-
-/* Contact Button */
+/* ==================== Contact Buttons ==================== */
 
 .contact-btn {
     display: inline-block;
-    margin: 10px;
-    padding: 12px 25px;
-    background-color: #00a8c6;
+
+    padding: 12px 22px;
+
+    margin: 5px;
+
+    background: #111;
     color: white;
+
     text-decoration: none;
+
     border-radius: 6px;
+
     font-weight: bold;
+
     transition: 0.3s;
 }
 
 .contact-btn:hover {
-    background-color: #00869d;
-    transform: translateY(-2px);
+    background: #007bff;
+    transform: translateY(-3px);
 }
-
-
-/* Contact Links */
-
-#contact a {
-    color: #00a8c6;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-#contact a:hover {
-    color: #00869d;
-    text-decoration: underline;
-}
-
 
 /* ==================== Footer ==================== */
 
 footer {
-    background-color: #222;
+    background: #111;
     color: white;
+
     text-align: center;
+
     padding: 20px;
 }
 
+footer p {
+    font-size: 14px;
+}
 
 /* ==================== Mobile Responsive ==================== */
 
 @media (max-width: 768px) {
 
-    header {
-        padding: 15px 20px;
-    }
+    /* Navigation */
 
     nav {
         flex-direction: column;
@@ -309,23 +384,82 @@ footer {
         gap: 15px;
     }
 
-    .hero h1 {
-        font-size: 35px;
+    /* Hero */
+
+    .hero {
+        padding: 50px 5%;
     }
 
-    .hero h2 {
-        font-size: 22px;
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
     }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text h2 {
+        font-size: 23px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    /* Profile */
+
+    .profile-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Sections */
 
     section {
-        padding: 50px 20px;
+        padding: 60px 5%;
     }
 
-    .btn,
-    .resume-btn,
-    .contact-btn {
-        display: block;
-        width: fit-content;
-        margin: 10px auto;
+    section h2 {
+        font-size: 28px;
     }
+
+    /* Buttons */
+
+    .btn,
+    .resume-btn {
+        margin: 5px;
+    }
+
+}
+
+/* ==================== Small Mobile Devices ==================== */
+
+@media (max-width: 480px) {
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .profile-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
 }
